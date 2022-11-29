@@ -1,19 +1,5 @@
 import { client } from '@/lib/client'
 
-export default function BlogId({ blog }) {
-  return (
-    <main>
-      <h1>{blog.title}</h1>
-      <p>{blog.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.body}`,
-        }}
-      />
-    </main>
-  )
-}
-
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: 'blogs' })
 
@@ -27,7 +13,28 @@ export const getStaticProps = async (context) => {
 
   return {
     props: {
-      blog: data,
+      data: data,
     },
   }
 }
+
+type Props = {
+  data: any
+}
+
+const Detail: React.FC<Props> = ({ data }) => {
+  console.log(data)
+  return (
+    <main>
+      <h1>{data.title}</h1>
+      <p>{data.publishedAt}</p>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `${data.body}`,
+        }}
+      />
+    </main>
+  )
+}
+
+export default Detail
