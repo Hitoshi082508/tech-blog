@@ -1,14 +1,29 @@
 import Link from 'next/link'
 import { client } from '@/lib/client'
+import { Content, Contents } from '@/types/contents'
 
-export default function Home({ blog }) {
+export const getStaticProps = async () => {
+  const data: Content = await client.get({ endpoint: 'blogs' })
+
+  return {
+    props: {
+      data: data.contents,
+    },
+  }
+}
+
+type Props = {
+  data: Contents[]
+}
+
+const Home: React.FC<Props> = ({ data }) => {
   return (
     <div>
       <ul>
-        {blog.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/${blog.id}`}>
-              <div>{blog.title}</div>
+        {data.map((data) => (
+          <li key={data.id}>
+            <Link href={`/${data.id}`}>
+              <div>{data.title}</div>
             </Link>
           </li>
         ))}
@@ -17,12 +32,4 @@ export default function Home({ blog }) {
   )
 }
 
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: 'blogs' })
-
-  return {
-    props: {
-      blog: data.contents,
-    },
-  }
-}
+export default Home
