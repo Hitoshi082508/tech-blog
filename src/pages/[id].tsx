@@ -24,11 +24,15 @@ type Props = {
 }
 
 const Detail: React.FC<Props> = ({ data }) => {
+  const createMarkup = () => {
+    return { __html: data.content }
+  }
+
   return (
     <main>
       <h1>{data.title}</h1>
       <div>{data.publishedAt}</div>
-      <div>{data.content}</div>
+      <div dangerouslySetInnerHTML={createMarkup()} />
     </main>
   )
 }
