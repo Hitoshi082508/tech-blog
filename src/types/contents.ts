@@ -13,6 +13,7 @@ export type Contents = {
   }
   content: string
   createdAt: string
+  excerpt: string
   eyecatch: {
     height: number
     url: string
