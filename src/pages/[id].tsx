@@ -1,5 +1,6 @@
 import { client } from '@/lib/client'
 import { Content, Contents, Params } from '@/types/contents'
+import { NextSeo } from 'next-seo'
 
 export const getStaticPaths = async () => {
   const data: Content = await client.get({ endpoint: 'blogs' })
@@ -29,11 +30,28 @@ const Detail: React.FC<Props> = ({ data }) => {
   }
 
   return (
-    <main>
-      <h1>{data.title}</h1>
-      <div>{data.publishedAt}</div>
-      <div dangerouslySetInnerHTML={createMarkup()} />
-    </main>
+    <>
+      <NextSeo
+        title={`Tech Blog | ${data.title}`}
+        description={data.excerpt}
+        openGraph={{
+          url: `https://tech-blog1.vercel.app/${data.id}`,
+          title: `Tech Blog | ${data.title}`,
+          description: data.excerpt,
+          // TODO: OGP画像の型を作るか、動的に作るやり方を調べる
+          images: [
+            {
+              url: 'https://tech-blog1.vercel.app/public/vercel.svg',
+            },
+          ],
+        }}
+      />
+      <main>
+        <h1>{data.title}</h1>
+        <div>{data.publishedAt}</div>
+        <div dangerouslySetInnerHTML={createMarkup()} />
+      </main>
+    </>
   )
 }
 
