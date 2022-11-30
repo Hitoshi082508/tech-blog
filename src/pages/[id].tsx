@@ -1,15 +1,16 @@
 import { client } from '@/lib/client'
+import { Content, Contents, Params } from '@/types/contents'
 
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: 'blogs' })
+  const data: Content = await client.get({ endpoint: 'blogs' })
 
   const paths = data.contents.map((content) => `/${content.id}`)
   return { paths, fallback: false }
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: Params) => {
   const id = context.params.id
-  const data = await client.get({ endpoint: 'blogs', contentId: id })
+  const data: Content = await client.get({ endpoint: 'blogs', contentId: id })
 
   return {
     props: {
@@ -19,20 +20,15 @@ export const getStaticProps = async (context) => {
 }
 
 type Props = {
-  data: any
+  data: Contents
 }
 
 const Detail: React.FC<Props> = ({ data }) => {
-  console.log(data)
   return (
     <main>
       <h1>{data.title}</h1>
-      <p>{data.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${data.body}`,
-        }}
-      />
+      <div>{data.publishedAt}</div>
+      <div>{data.content}</div>
     </main>
   )
 }

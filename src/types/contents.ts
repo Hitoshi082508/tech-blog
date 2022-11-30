@@ -1,26 +1,35 @@
 export type Content = {
-  contents: Contents
+  contents: Contents[]
 }
 
 export type Contents = {
   category: {
-    createdAt: Date
+    createdAt: string
     id: string
     name: string
-    publishedAt: Date
-    revisedAt: Date
-    updatedAt: Date
+    publishedAt: string
+    revisedAt: string
+    updatedAt: string
   }
   content: string
-  createdAt: Date
+  createdAt: string
   eyecatch: {
     height: number
     url: string
     width: number
   }
   id: string
-  publishedAt: Date
-  revisedAt: Date
+  publishedAt: string
+  revisedAt: string
   title: string
-  updatedAt: Date
+  updatedAt: string
+}
+
+export type Params = {
+  params: {
+    id: string
+  }
+  locales?: string
+  locale?: string
+  defaultLocale?: string
 }
