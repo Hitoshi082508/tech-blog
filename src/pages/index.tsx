@@ -1,6 +1,7 @@
-import Link from 'next/link'
 import { client } from '@/lib/client'
 import { Content, Contents } from '@/types/contents'
+import TopCard from '@/components/TopCard'
+import { styles } from './styles'
 
 export const getStaticProps = async () => {
   const data: Content = await client.get({ endpoint: 'blogs' })
@@ -18,16 +19,10 @@ type Props = {
 
 const Home: React.FC<Props> = ({ data }) => {
   return (
-    <div>
-      <ul>
-        {data.map((data) => (
-          <li key={data.id}>
-            <Link href={`/${data.id}`}>
-              <div>{data.title}</div>
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <div css={styles.container}>
+      {data.map((data) => (
+        <TopCard key={data.id} data={data} />
+      ))}
     </div>
   )
 }

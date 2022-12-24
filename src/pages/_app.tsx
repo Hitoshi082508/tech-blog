@@ -1,3 +1,6 @@
+import { globalStyles } from '@/styles/globalStyles'
+import { theme } from '@/styles/theme'
+import { Global, ThemeProvider } from '@emotion/react'
 import { DefaultSeo } from 'next-seo'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -39,7 +42,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
           cardType: 'summary_large_image',
         }}
       />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Global styles={globalStyles} />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }
