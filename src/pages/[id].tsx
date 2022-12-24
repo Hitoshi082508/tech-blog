@@ -47,7 +47,7 @@ const Detail: React.FC<Props> = ({ data }) => {
         }}
       />
       <main>
-        <h1>{data.title}</h1>
+        <h1>詳細ページタイトル: {data.title}</h1>
         <div>{data.publishedAt}</div>
         <div dangerouslySetInnerHTML={createMarkup()} />
       </main>

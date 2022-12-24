@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { client } from '@/lib/client'
 import { Content, Contents } from '@/types/contents'
+import { NextPage } from 'next'
 
 export const getStaticProps = async () => {
   const data: Content = await client.get({ endpoint: 'blogs' })
@@ -16,9 +17,10 @@ type Props = {
   data: Contents[]
 }
 
-const Home: React.FC<Props> = ({ data }) => {
+const Home: NextPage<Props> = ({ data }) => {
   return (
     <div>
+      <h1>トップページ</h1>
       <ul>
         {data.map((data) => (
           <li key={data.id}>
