@@ -10,7 +10,7 @@ export type Contents = {
     publishedAt: string
     revisedAt: string
     updatedAt: string
-  }
+  }[]
   content: string
   createdAt: string
   excerpt: string

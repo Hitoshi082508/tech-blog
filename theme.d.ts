@@ -4,15 +4,19 @@ declare module '@emotion/react' {
   export interface Theme {
     color: {
       main: string
+      white: string
     }
     typography: {
       text: {
         size: {
-          m: string
+          l: '18px'
+          m: '16px'
+          s: '14px'
+          xs: '12px'
         }
       }
       weight: {
-        bold: number
+        bold: 'bold'
       }
     }
   }

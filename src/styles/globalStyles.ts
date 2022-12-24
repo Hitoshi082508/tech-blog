@@ -60,4 +60,7 @@ export const globalStyles = css`
   body {
     font-family: 'Raleway';
   }
+  a {
+    text-decoration: none;
+  }
 `
