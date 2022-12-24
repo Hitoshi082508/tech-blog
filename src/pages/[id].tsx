@@ -32,11 +32,11 @@ const Detail: React.FC<Props> = ({ data }) => {
   return (
     <>
       <NextSeo
-        title={`Tech Blog | ${data.title}`}
+        title={`Intern Media | ${data.title}`}
         description={data.excerpt}
         openGraph={{
           url: `https://tech-blog1.vercel.app/${data.id}`,
-          title: `Tech Blog | ${data.title}`,
+          title: `Intern Media | ${data.title}`,
           description: data.excerpt,
           // TODO: OGP画像の型を作るか、動的に作るやり方を調べる
           images: [
