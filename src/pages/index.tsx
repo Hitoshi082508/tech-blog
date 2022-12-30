@@ -1,7 +1,6 @@
 import { client } from '@/lib/client'
 import { Content, Contents } from '@/types/contents'
-import TopCard from '@/components/TopCard'
-import { styles } from './styles'
+import HomePage from '@/components/Pages/Home'
 
 export const getStaticProps = async () => {
   const data: Content = await client.get({ endpoint: 'blogs' })
@@ -18,13 +17,7 @@ type Props = {
 }
 
 const Home: React.FC<Props> = ({ data }) => {
-  return (
-    <div css={styles.container}>
-      {data.map((data) => (
-        <TopCard key={data.id} data={data} />
-      ))}
-    </div>
-  )
+  return <HomePage data={data} />
 }
 
 export default Home
