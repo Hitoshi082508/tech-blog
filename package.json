@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prepare": "husky install",
     "lint": "next lint",
     "check-types": "tsc --noEmit",
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
@@ -35,7 +36,7 @@
     "typescript": "^4.9.3"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{ts,tsx, js, json}": [
       "yarn lint",
       "yarn format",
       "yarn lint:fix"
