@@ -11,10 +11,12 @@
     "check-types": "tsc --noEmit",
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "format": "prettier --write .",
-    "test-all": "npx yarn-run-all lint check-types format lint:fix"
+    "test-all": "npx yarn-run-all lint check-types format lint:fix",
+    "create-icon": "npx @svgr/cli -d src/components/Atoms/Icons assets/icons"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
+    "@svgr/webpack": "^6.5.1",
     "microcms-js-sdk": "^2.3.2",
     "next": "13.0.5",
     "next-seo": "^5.14.1",
