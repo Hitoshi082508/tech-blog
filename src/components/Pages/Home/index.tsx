@@ -1,4 +1,5 @@
 import TopCard from '@/components/Molecules/TopCard'
+import Category from '@/components/Templates/Category'
 import Member from '@/components/Templates/Member'
 import { Contents } from '@/types/contents'
 import { styles } from './styles'
@@ -15,6 +16,7 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
           return <TopCard key={item.id} data={item} />
         })}
       </div>
+      <Category />
       <Member />
     </>
   )
