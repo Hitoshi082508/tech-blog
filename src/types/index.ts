@@ -8,3 +8,11 @@ export type MemberType = {
   grade_and_occupation: string
   introduction: string
 }
+
+export type JobType = {
+  id: number
+  link: string
+  occupation: string
+  iconPath: StaticImageData
+  description: string
+}
