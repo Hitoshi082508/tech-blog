@@ -49,9 +49,13 @@ export const styles = makeStyles({
     align-items: center;
     max-width: 100%;
     overflow: hidden;
+    overflow-x: scroll;
     gap: ${spacing * 6}px;
     padding-top: ${spacing * 7}px;
     padding-bottom: ${spacing * 10}px;
+    ::-webkit-scrollbar {
+      display: none;
+    }
     ${sp} {
       gap: ${spacing * 3}px;
       padding-top: ${spacing * 6}px;
