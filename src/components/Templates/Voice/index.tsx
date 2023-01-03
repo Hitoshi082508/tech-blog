@@ -40,20 +40,8 @@ const Voice: React.FC = () => {
         })}
       </div>
       <button css={styles.button}>先輩の声一覧を見る</button>
-      <Arrow
-        position="left"
-        top={250}
-        spTop={180}
-        left={-50}
-        onClick={handlePrev}
-      />
-      <Arrow
-        position="right"
-        top={250}
-        spTop={180}
-        right={-50}
-        onClick={handleNext}
-      />
+      <Arrow position="left" top={250} spTop={180} onClick={handlePrev} />
+      <Arrow position="right" top={250} spTop={180} onClick={handleNext} />
     </div>
   )
 }

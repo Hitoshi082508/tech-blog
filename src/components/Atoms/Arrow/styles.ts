@@ -7,15 +7,14 @@ export const arrowPosition = (
   direction: 'left' | 'right',
   top: number,
   spTop: number,
-  left: number,
-  right: number,
 ) => {
   if (direction === 'left') {
     return css`
       justify-content: flex-end;
       top: ${top}px;
-      left: ${left}px;
+      left: 0px;
       padding-right: ${spacing * 2}px;
+      border-radius: 0 100px 100px 0;
       ${sp} {
         top: ${spTop}px;
       }
@@ -24,8 +23,9 @@ export const arrowPosition = (
     return css`
       justify-content: flex-start;
       top: ${top}px;
-      right: ${right}px;
+      right: 0px;
       padding-left: ${spacing * 2}px;
+      border-radius: 100px 0 0 100px;
       ${sp} {
         top: ${spTop}px;
       }
@@ -38,7 +38,7 @@ export const styles = makeStyles({
     position: absolute;
     display: flex;
     align-items: center;
-    width: 100px;
+    width: 50px;
     height: 100px;
     background-color: ${theme.color.white};
     border-radius: 50%;

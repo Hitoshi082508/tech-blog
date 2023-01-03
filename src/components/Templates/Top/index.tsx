@@ -37,20 +37,8 @@ const Top: React.FC<TopProps> = ({ data }) => {
           return <TopCard key={item.id} data={item} currentItem={currentItem} />
         })}
       </div>
-      <Arrow
-        position="left"
-        top={140}
-        spTop={100}
-        left={-50}
-        onClick={handlePrev}
-      />
-      <Arrow
-        position="right"
-        top={140}
-        spTop={100}
-        right={-50}
-        onClick={handleNext}
-      />
+      <Arrow position="left" top={140} spTop={100} onClick={handlePrev} />
+      <Arrow position="right" top={140} spTop={100} onClick={handleNext} />
     </div>
   )
 }
