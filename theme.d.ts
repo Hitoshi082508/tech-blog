@@ -8,6 +8,7 @@ declare module '@emotion/react' {
       white: string
       black: string
       gray: string
+      deepGray: string
     }
     typography: {
       heading: {
