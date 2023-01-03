@@ -1,15 +1,16 @@
 import { Contents } from '@/types/contents'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import { styles } from './styles'
+import { changePosition, styles } from './styles'
 
 type TopCardProps = {
   data: Contents
+  currentItem: number
 }
 
-const TopCard: React.FC<TopCardProps> = ({ data }) => {
+const TopCard: React.FC<TopCardProps> = ({ data, currentItem }) => {
   return (
-    <Link href={data.id} css={styles.container}>
+    <Link href={data.id} css={[styles.container, changePosition(currentItem)]}>
       {/* alt属性に何を入れるか検討する */}
       <div css={styles.eyecatchContainer}>
         <Image
