@@ -20,6 +20,10 @@ export const styles = makeStyles({
     align-items: center;
     max-width: 100%;
     overflow: hidden;
+    overflow-x: scroll;
     gap: ${spacing * 7}px;
+    ::-webkit-scrollbar {
+      display: none;
+    }
   `,
 })
