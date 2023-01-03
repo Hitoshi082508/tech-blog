@@ -6,4 +6,5 @@ export const color: Theme['color'] = {
   white: '#fff',
   black: '#2E2E2F',
   gray: '#F2F2F2',
+  deepGray: '#6A6A6A',
 }

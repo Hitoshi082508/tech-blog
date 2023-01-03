@@ -54,7 +54,7 @@ export const styles = makeStyles({
   `,
   introduction: (theme) => css`
     font-size: ${theme.typography.text.size.s};
-    color: ${theme.color.gray};
+    color: ${theme.color.deepGray};
     ${sp} {
       font-size: ${theme.typography.text.size.xs};
     }
