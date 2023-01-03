@@ -19,6 +19,8 @@ export const globalStyles = css`
     line-height: 1.5;
     letter-spacing: 0.05em;
     -webkit-font-smoothing: antialiased;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+      'Hiragino Sans', Meiryo, sans-serif;
   }
   img,
   picture,
@@ -57,9 +59,6 @@ export const globalStyles = css`
   }
 
   /* グローバルスタイル */
-  body {
-    font-family: 'Raleway';
-  }
   a {
     text-decoration: none;
   }
