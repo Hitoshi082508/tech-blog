@@ -1,4 +1,7 @@
+import { Theme } from '@emotion/react'
 import { StaticImageData } from 'next/legacy/image'
+
+export type Color = keyof Theme['color']
 
 export type MemberType = {
   id: number

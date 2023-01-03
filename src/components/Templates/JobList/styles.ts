@@ -3,13 +3,20 @@ import makeStyles from '@/styles/makeStyles'
 import { spacing } from '@/styles/spacing'
 import { sp } from '@/styles/breakpoint'
 
+export const getBackgroundColor = (backgroundColor: string) => css`
+  background-color: ${backgroundColor};
+`
+
+export const getFontColor = (fontColor: string) => css`
+  color: ${fontColor};
+`
+
 export const styles = makeStyles({
-  base: (theme) => css`
+  base: () => css`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: ${theme.color.main};
     padding: ${spacing * 16}px 0;
     ${sp} {
       padding: ${spacing * 8}px 0;
@@ -23,22 +30,25 @@ export const styles = makeStyles({
   `,
   titleContainer: () => css`
     display: flex;
+    align-items: center;
     gap: ${spacing * 3}px;
     ${sp} {
       gap: ${spacing}px;
     }
   `,
+  icon: () => css`
+    width: 30px;
+    height: 30px;
+  `,
   title: (theme) => css`
     font-size: ${theme.typography.heading.size.m};
     font-weight: ${theme.typography.weight.bold};
-    color: ${theme.color.white};
     ${sp} {
       font-size: ${theme.typography.heading.size.s};
     }
   `,
   subTitle: (theme) => css`
     font-size: ${theme.typography.text.size.m};
-    color: ${theme.color.white};
     margin-bottom: ${spacing * 7}px;
     ${sp} {
       font-size: ${theme.typography.text.size.s};

@@ -5,6 +5,7 @@ export const typography: Theme['typography'] = {
     size: {
       m: '30px',
       s: '24px',
+      xs: '20px',
     },
   },
   text: {

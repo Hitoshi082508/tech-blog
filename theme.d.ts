@@ -14,6 +14,7 @@ declare module '@emotion/react' {
         size: {
           m: '30px'
           s: '24px'
+          xs: '20px'
         }
       }
       text: {
