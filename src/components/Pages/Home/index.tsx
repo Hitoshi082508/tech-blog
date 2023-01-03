@@ -2,6 +2,7 @@ import TopCard from '@/components/Molecules/TopCard'
 import About from '@/components/Templates/About'
 import Category from '@/components/Templates/Category'
 import Member from '@/components/Templates/Member'
+import Voice from '@/components/Templates/Voice'
 import { Contents } from '@/types/contents'
 import { styles } from './styles'
 
@@ -19,6 +20,7 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
       </div>
       <About />
       <Category />
+      <Voice />
       <Member />
     </>
   )

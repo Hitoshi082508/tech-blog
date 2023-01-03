@@ -12,8 +12,8 @@ declare module '@emotion/react' {
     typography: {
       heading: {
         size: {
-          m: string
-          s: string
+          m: '30px'
+          s: '24px'
         }
       }
       text: {

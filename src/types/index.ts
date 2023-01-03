@@ -16,3 +16,12 @@ export type JobType = {
   iconPath: StaticImageData
   description: string
 }
+
+export type VoiceType = {
+  id: number
+  thumbnailPath: StaticImageData
+  alt: string
+  title: string
+  university_and_name: string
+  href: string
+}
