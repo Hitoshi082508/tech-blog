@@ -3,6 +3,11 @@ import makeStyles from '@/styles/makeStyles'
 import { spacing } from '@/styles/spacing'
 import { sp } from '@/styles/breakpoint'
 
+export const changePosition = (n: number) => css`
+  transform: translate3d(${-109 * n}%, 0, 0);
+  transition: transform 1s;
+`
+
 export const styles = makeStyles({
   container: () => css`
     max-width: 366px;

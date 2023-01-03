@@ -1,10 +1,9 @@
-import TopCard from '@/components/Molecules/TopCard'
 import About from '@/components/Templates/About'
 import Category from '@/components/Templates/Category'
 import Member from '@/components/Templates/Member'
+import Top from '@/components/Templates/Top'
 import Voice from '@/components/Templates/Voice'
 import { Contents } from '@/types/contents'
-import { styles } from './styles'
 
 type HomePageProps = {
   data: Contents[]
@@ -13,11 +12,7 @@ type HomePageProps = {
 const HomePage: React.FC<HomePageProps> = ({ data }) => {
   return (
     <>
-      <div css={styles.container}>
-        {data.map((item) => {
-          return <TopCard key={item.id} data={item} />
-        })}
-      </div>
+      <Top data={data} />
       <About />
       <Category />
       <Voice />
