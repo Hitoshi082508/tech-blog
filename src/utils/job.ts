@@ -1,4 +1,5 @@
 import engineerIconPath from '../../assets/images/engineer-icon.png'
+import designerIconPath from '../../assets/images/designer-icon.png'
 
 export const JobData = [
   {
@@ -11,9 +12,9 @@ export const JobData = [
   },
   {
     id: 2,
-    link: '/engineer',
-    occupation: 'エンジニア',
-    iconPath: engineerIconPath,
+    link: '/designer',
+    occupation: 'デザイナー',
+    iconPath: designerIconPath,
     description:
       'テキストをここに書きます。テキストをここに書きます。テキストをここに書きます。',
   },
