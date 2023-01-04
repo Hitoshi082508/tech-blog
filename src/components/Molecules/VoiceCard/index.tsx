@@ -4,12 +4,12 @@ import { changePosition, styles } from './styles'
 
 type VoiceCardProps = {
   data: VoiceType
-  currentItem: number
+  current: number
 }
 
-const VoiceCard: React.FC<VoiceCardProps> = ({ data, currentItem }) => {
+const VoiceCard: React.FC<VoiceCardProps> = ({ data, current }) => {
   return (
-    <div css={[styles.container, changePosition(currentItem)]}>
+    <div css={[styles.container, changePosition(current)]}>
       <NextImage
         src={data.thumbnailPath}
         alt={data.alt}

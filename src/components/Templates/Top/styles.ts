@@ -20,8 +20,8 @@ export const styles = makeStyles({
     align-items: center;
     max-width: 100%;
     overflow: hidden;
-    overflow-x: scroll;
     gap: ${spacing * 5}px;
+    padding-left: ${spacing * 5}px;
     ${sp} {
       padding: 0 calc((100vw - 310px) / 2);
       gap: calc(100vw - 310px);
