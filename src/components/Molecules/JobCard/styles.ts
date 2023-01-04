@@ -13,6 +13,7 @@ export const styles = makeStyles({
     background-color: ${theme.color.white};
     border-radius: 15px;
     padding: ${spacing * 6}px ${spacing * 4}px;
+    box-shadow: ${theme.shadow.main};
     ${sp} {
       width: 175px;
       height: 220px;

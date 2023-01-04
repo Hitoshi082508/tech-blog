@@ -21,7 +21,6 @@ const JobCard: React.FC<JobCardProps> = ({ data }) => {
           spHeight={50}
         />
         <div css={styles.description}>{data.description}</div>
-        {/* <div css={styles.more}>詳しく見る</div> */}
       </div>
     </Link>
   )
