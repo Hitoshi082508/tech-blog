@@ -14,8 +14,7 @@ export const useCarousel = (length: number) => {
   }, [current])
 
   const prev = useCallback(() => {
-    if (current >= -1 && isMobile) {
-      setCurrent(length - 1)
+    if (current === 0) {
       return
     }
     setCurrent((n) => n - 1)
