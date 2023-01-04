@@ -1,10 +1,14 @@
 import { css } from '@emotion/react'
 import makeStyles from '@/styles/makeStyles'
 import { spacing } from '@/styles/spacing'
+import { sp } from '@/styles/breakpoint'
 
 export const changePosition = (n: number) => css`
   transform: translate3d(${-109 * n}%, 0, 0);
   transition: transform 1s;
+  ${sp} {
+    transform: translate3d(${-100 * n}vw, 0, 0);
+  }
 `
 
 export const styles = makeStyles({
