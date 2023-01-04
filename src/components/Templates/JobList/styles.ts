@@ -25,7 +25,7 @@ export const styles = makeStyles({
   container: () => css`
     width: 1120px;
     ${sp} {
-      width: 375px;
+      width: 345px;
     }
   `,
   titleContainer: () => css`
@@ -60,9 +60,9 @@ export const styles = makeStyles({
     flex-wrap: wrap;
     justify-content: center;
     width: 1120px;
-    gap: ${spacing * 5}px;
+    gap: ${spacing * 2}px;
     ${sp} {
-      width: 375px;
+      width: 345px;
     }
     ::after {
       content: '';

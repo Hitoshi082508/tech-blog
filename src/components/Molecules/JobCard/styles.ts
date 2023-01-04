@@ -15,7 +15,7 @@ export const styles = makeStyles({
     padding: ${spacing * 6}px ${spacing * 4}px;
     box-shadow: ${theme.shadow.main};
     ${sp} {
-      width: 175px;
+      width: 165px;
       height: 220px;
       padding: ${spacing * 3}px ${spacing * 2}px;
     }
