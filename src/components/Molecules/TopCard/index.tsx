@@ -5,12 +5,12 @@ import { changePosition, styles } from './styles'
 
 type TopCardProps = {
   data: Contents
-  currentItem: number
+  current: number
 }
 
-const TopCard: React.FC<TopCardProps> = ({ data, currentItem }) => {
+const TopCard: React.FC<TopCardProps> = ({ data, current }) => {
   return (
-    <Link href={data.id} css={[styles.container, changePosition(currentItem)]}>
+    <Link href={data.id} css={[styles.container, changePosition(current)]}>
       {/* alt属性に何を入れるか検討する */}
       <div css={styles.eyecatchContainer}>
         <Image
