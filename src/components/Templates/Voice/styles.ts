@@ -57,7 +57,8 @@ export const styles = makeStyles({
       display: none;
     }
     ${sp} {
-      gap: ${spacing * 3}px;
+      padding: 0 calc((100vw - 320px) / 2);
+      gap: calc(100vw - 320px);
       padding-top: ${spacing * 6}px;
       padding-bottom: ${spacing * 6}px;
     }

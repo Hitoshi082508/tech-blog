@@ -6,11 +6,17 @@ import { sp } from '@/styles/breakpoint'
 export const changePosition = (n: number) => css`
   transform: translate3d(${-109 * n}%, 0, 0);
   transition: transform 1s;
+  ${sp} {
+    transform: translate3d(${-100 * n}vw, 0, 0);
+  }
 `
 
 export const styles = makeStyles({
   container: () => css`
     max-width: 366px;
+    ${sp} {
+      max-width: 310px;
+    }
   `,
   eyecatchContainer: () => css`
     position: relative;
