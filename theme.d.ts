@@ -30,5 +30,8 @@ declare module '@emotion/react' {
         bold: 'bold'
       }
     }
+    shadow: {
+      main: string
+    }
   }
 }
