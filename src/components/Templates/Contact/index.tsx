@@ -1,6 +1,6 @@
 import Image from 'next/legacy/image'
 import { styles } from './styles'
-import BackgroundImagePathPC from '../../../../assets/images/contact-background-pc.jpg'
+import BackgroundImagePathPC from '../../../../assets/images/contact-background-pc.png'
 import BackgroundImagePathSP from '../../../../assets/images/contact-background-sp.png'
 import NextImage from '@/components/Atoms/NextImage'
 import ManImagePath from '../../../../assets/images/contact-man.png'
