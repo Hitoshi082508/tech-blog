@@ -1,4 +1,5 @@
 import About from '@/components/Templates/About'
+import Contact from '@/components/Templates/Contact'
 import JobList from '@/components/Templates/JobList'
 import Member from '@/components/Templates/Member'
 import Top from '@/components/Templates/Top'
@@ -23,6 +24,7 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
       />
       <Voice />
       <Member />
+      <Contact />
     </>
   )
 }

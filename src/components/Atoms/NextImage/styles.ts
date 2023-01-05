@@ -16,6 +16,16 @@ export const getHeightWidthStyle = (
   }
 `
 
+export const displayNone = (spNone?: boolean) => {
+  if (spNone) {
+    return css`
+      ${sp} {
+        display: none;
+      }
+    `
+  }
+}
+
 export const styles = makeStyles({
   container: () => css`
     position: relative;

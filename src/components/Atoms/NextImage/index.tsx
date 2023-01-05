@@ -1,11 +1,12 @@
 import Image, { StaticImageData } from 'next/legacy/image'
-import { getHeightWidthStyle, styles } from './styles'
+import { displayNone, getHeightWidthStyle, styles } from './styles'
 
 type NextImageProps = {
   width: number
   height: number
   spWidth?: number
   spHeight?: number
+  spNone?: boolean
   src: StaticImageData
   alt: string
 }
@@ -15,6 +16,7 @@ const NextImage: React.FC<NextImageProps> = ({
   height,
   spWidth,
   spHeight,
+  spNone = false,
   src,
   alt,
 }) => {
@@ -22,6 +24,7 @@ const NextImage: React.FC<NextImageProps> = ({
     <div
       css={[
         styles.container,
+        displayNone(spNone),
         getHeightWidthStyle(width, height, spWidth, spHeight),
       ]}
     >
