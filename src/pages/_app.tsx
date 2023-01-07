@@ -1,3 +1,4 @@
+import Header from '@/components/Molecules/Header'
 import { globalStyles } from '@/styles/globalStyles'
 import { theme } from '@/styles/theme'
 import { Global, ThemeProvider } from '@emotion/react'
@@ -44,6 +45,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
       />
       <ThemeProvider theme={theme}>
         <Global styles={globalStyles} />
+        <Header />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
