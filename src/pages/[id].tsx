@@ -1,3 +1,4 @@
+import DetailPage from '@/components/Pages/Detail'
 import { client } from '@/lib/client'
 import { Content, Contents, Params } from '@/types/contents'
 import { NextSeo } from 'next-seo'
@@ -20,15 +21,11 @@ export const getStaticProps = async (context: Params) => {
   }
 }
 
-type Props = {
+type DetailProps = {
   data: Contents
 }
 
-const Detail: React.FC<Props> = ({ data }) => {
-  const createMarkup = () => {
-    return { __html: data.content }
-  }
-
+const Detail: React.FC<DetailProps> = ({ data }) => {
   return (
     <>
       <NextSeo
@@ -46,11 +43,7 @@ const Detail: React.FC<Props> = ({ data }) => {
           ],
         }}
       />
-      <main>
-        <h1>{data.title}</h1>
-        <div>{data.publishedAt}</div>
-        <div dangerouslySetInnerHTML={createMarkup()} />
-      </main>
+      <DetailPage data={data} />
     </>
   )
 }

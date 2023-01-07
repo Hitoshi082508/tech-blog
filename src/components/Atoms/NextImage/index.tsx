@@ -1,13 +1,21 @@
 import Image, { StaticImageData } from 'next/legacy/image'
-import { displayNone, getHeightWidthStyle, styles } from './styles'
+import {
+  displayNone,
+  getHeightWidthStyle,
+  styles,
+  borderRadius,
+  getPercentWidth,
+} from './styles'
 
 type NextImageProps = {
   width: number
   height: number
   spWidth?: number
   spHeight?: number
+  percentWidth?: number
   spNone?: boolean
-  src: StaticImageData
+  radius?: number
+  src: string | StaticImageData
   alt: string
 }
 
@@ -15,8 +23,10 @@ const NextImage: React.FC<NextImageProps> = ({
   width,
   height,
   spWidth,
+  percentWidth,
   spHeight,
   spNone = false,
+  radius,
   src,
   alt,
 }) => {
@@ -26,6 +36,8 @@ const NextImage: React.FC<NextImageProps> = ({
         styles.container,
         displayNone(spNone),
         getHeightWidthStyle(width, height, spWidth, spHeight),
+        getPercentWidth(percentWidth),
+        borderRadius(radius),
       ]}
     >
       <Image src={src} alt={alt} layout="fill" />
