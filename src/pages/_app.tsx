@@ -1,3 +1,4 @@
+import Footer from '@/components/Molecules/Footer'
 import Header from '@/components/Molecules/Header'
 import { globalStyles } from '@/styles/globalStyles'
 import { theme } from '@/styles/theme'
@@ -47,6 +48,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
         <Global styles={globalStyles} />
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   )
