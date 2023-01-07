@@ -11,59 +11,80 @@ export const styles = makeStyles({
   `,
   container: (theme) => css`
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: ${spacing * 3}px;
+    gap: ${spacing * 6}px;
     width: 1120px;
     height: 240px;
     background-color: ${theme.color.white};
-    margin-bottom: ${spacing * 5}px;
     border-radius: 20px;
+    margin-bottom: ${spacing * 5}px;
     ${sp} {
       flex-direction: column-reverse;
+      gap: 0;
       width: 345px;
       height: 430px;
     }
   `,
   descriptionContainer: (theme) => css`
-    width: 700px;
-    margin-right: ${spacing * 5}px;
+    width: 650px;
     background-color: ${theme.color.white};
     ${sp} {
-      margin-right: 0;
       width: 315px;
-      flex-direction: column;
-      align-items: flex-start;
     }
   `,
   descriptionTitleContainer: (theme) => css`
     display: flex;
     align-items: center;
     margin-bottom: ${spacing * 2}px;
-    border-bottom: solid ${theme.color.gray};
+    border-bottom: 1px solid ${theme.color.gray};
     ${sp} {
       flex-direction: column;
       align-items: flex-start;
     }
   `,
   stepNumber: (theme) => css`
-    margin-right: ${spacing * 3}px;
     color: ${theme.color.main};
     font-size: ${theme.typography.heading.size.m};
     font-weight: ${theme.typography.weight.bold};
+    margin-right: ${spacing * 3}px;
+  `,
+  number: (theme) => css`
+    font-size: ${theme.typography.heading.size.xl};
+    margin-left: ${spacing * 1}px;
+    ${sp} {
+      font-size: ${theme.typography.heading.size.m};
+    }
   `,
   descriptionTitle: (theme) => css`
     font-size: ${theme.typography.heading.size.s};
     font-weight: ${theme.typography.weight.bold};
     ${sp} {
       font-size: ${theme.typography.heading.size.xs};
-      margin-bottom: ${spacing * 2}px;
     }
   `,
   description: (theme) => css`
-    margin-top: ${spacing * 2}px;
     font-size: ${theme.typography.text.size.m};
+    margin-top: ${spacing * 4}px;
     ${sp} {
       width: 315px;
+      font-size: ${theme.typography.text.size.s};
+      margin-top: 0;
+    }
+  `,
+  button: (theme) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background-color: ${theme.color.main};
+    border-radius: 5px;
+    margin-left: auto;
+    font-size: ${theme.typography.text.size.m};
+    font-weight: ${theme.typography.weight.bold};
+    color: ${theme.color.white};
+    ${sp} {
       font-size: ${theme.typography.text.size.s};
     }
   `,

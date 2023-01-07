@@ -1,33 +1,31 @@
 import NextImage from '@/components/Atoms/NextImage'
+import { Steps } from '@/types/contents'
 import Link from 'next/link'
 import { styles } from './styles'
-import DescriptionImagePath from '../../../../assets/images/description-image.png'
 type StepCardProps = {
-  stepNumber: number
-  title: string
-  excerpt: string
-  imageUrl: string
+  step: Steps
 }
 
-const StepCard: React.FC<StepCardProps> = ({
-  stepNumber,
-  title,
-  excerpt,
-  imageUrl,
-}) => {
+const StepCard: React.FC<StepCardProps> = ({ step }) => {
   return (
     <div css={styles.base}>
       <div css={styles.container}>
         <div css={styles.descriptionContainer}>
           <div css={styles.descriptionTitleContainer}>
-            <h2 css={styles.stepNumber}>step{stepNumber}</h2>
-            <h2 css={styles.descriptionTitle}>{title}</h2>
+            <h2 css={styles.stepNumber}>
+              step
+              <span css={styles.number}>{step.step_number}</span>
+            </h2>
+            <h2 css={styles.descriptionTitle}>{step.title}</h2>
           </div>
-          <div css={styles.description}>{excerpt}</div>
-          <div>~ここにボタンを作る~</div>
+          <div css={styles.description}>{step.excerpt}</div>
+          <Link href={step.id} css={styles.button}>
+            <span>読む</span>
+            <span>→</span>
+          </Link>
         </div>
         <NextImage
-          src={imageUrl}
+          src={step.eyecatch.url}
           width={296}
           height={192}
           spWidth={315}

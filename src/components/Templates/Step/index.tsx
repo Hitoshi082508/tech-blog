@@ -14,16 +14,8 @@ const Step: React.FC<StepProps> = ({ title, data }) => {
         <div css={styles.titleContainer}>
           <h2 css={styles.title}>{title}</h2>
         </div>
-        {data.map((item, key) => {
-          return (
-            <StepCard
-              key={key}
-              stepNumber={item.step_number}
-              title={item.title}
-              excerpt={item.excerpt}
-              imageUrl={item.eyecatch.url}
-            />
-          )
+        {data.map((item) => {
+          return <StepCard key={item.id} step={item} />
         })}
       </div>
     </div>
