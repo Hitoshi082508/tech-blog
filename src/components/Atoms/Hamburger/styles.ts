@@ -39,7 +39,7 @@ export const styles = makeStyles({
       color: ${theme.color.black};
     }
     animation-name: opacity;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
     @keyframes opacity {
       from {
         opacity: 0;

@@ -2,17 +2,24 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { MdPeople } from 'react-icons/md'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { GrClose } from 'react-icons/gr'
 import { styles } from './styles'
+import useStopScrollingBackContent from '@/hooks/useStopScrollingBackContents'
 
 const Hamburger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
+  useStopScrollingBackContent({ active: isOpen })
   return (
     <div css={styles.container}>
-      <GiHamburgerMenu
-        size={30}
-        css={styles.icon}
-        onClick={() => setIsOpen(!isOpen)}
-      />
+      {isOpen ? (
+        <GrClose size={30} css={styles.icon} onClick={() => setIsOpen(false)} />
+      ) : (
+        <GiHamburgerMenu
+          size={30}
+          css={styles.icon}
+          onClick={() => setIsOpen(true)}
+        />
+      )}
       {isOpen && (
         <ul css={styles.navContainer}>
           <li>
