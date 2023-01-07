@@ -36,7 +36,7 @@ const NextImage: React.FC<NextImageProps> = ({
         styles.container,
         displayNone(spNone),
         getHeightWidthStyle(width, height, spWidth, spHeight),
-        getPercentWidth(percentWidth),
+        percentWidth && getPercentWidth(percentWidth),
         borderRadius(radius),
       ]}
     >
