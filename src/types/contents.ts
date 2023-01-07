@@ -23,6 +23,7 @@ export type Contents = {
     url: string
     width: number
   }
+  eyecatchAlt: string
   id: string
   publishedAt: string
   revisedAt: string

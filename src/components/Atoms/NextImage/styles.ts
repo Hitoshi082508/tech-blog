@@ -16,6 +16,19 @@ export const getHeightWidthStyle = (
   }
 `
 
+export const getPercentWidth = (width: number) => css`
+  ${sp} {
+    width: ${width}%;
+    height: 230px;
+  }
+`
+
+export const borderRadius = (radius: number) => css`
+  span {
+    border-radius: ${radius}px;
+  }
+`
+
 export const displayNone = (spNone?: boolean) => {
   if (spNone) {
     return css`
