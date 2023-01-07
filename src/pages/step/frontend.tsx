@@ -2,8 +2,29 @@ import JobDescription from '@/components/Templates/JobDescription'
 import EngineerIconPath from '../../../assets/images/engineer-icon.png'
 import DescriptionImagePath from '../../../assets/images/description-image.png'
 import Step from '@/components/Templates/Step'
+import { StepContent, Steps } from '@/types/contents'
+import { client } from '@/lib/client'
 
-const DesignerPage: React.FC = () => {
+export const getStaticProps = async () => {
+  const id = 'uvvyd49h9z'
+  const data: StepContent = await client.get({
+    endpoint: 'step',
+    queries: { filters: `category[equals]${id}`, orders: 'step_number' },
+  })
+  console.log(data.contents)
+
+  return {
+    props: {
+      data: data.contents,
+    },
+  }
+}
+
+type FrontendProps = {
+  data: Steps[]
+}
+
+const FrontendPage: React.FC<FrontendProps> = ({ data }) => {
   return (
     <div>
       <JobDescription
@@ -15,9 +36,9 @@ const DesignerPage: React.FC = () => {
         thumbnailPath={DescriptionImagePath}
         thumbnailAlt="デザイナーの説明画像"
       />
-      <Step title="フロントエンジニアになるステップ" />
+      <Step title="フロントエンジニアになるステップ" data={data} />
     </div>
   )
 }
 
-export default DesignerPage
+export default FrontendPage

@@ -2,6 +2,10 @@ export type Content = {
   contents: Contents[]
 }
 
+export type StepContent = {
+  contents: Steps[]
+}
+
 export type Contents = {
   category: {
     createdAt: string
@@ -24,6 +28,32 @@ export type Contents = {
   revisedAt: string
   title: string
   updatedAt: string
+}
+
+export type Steps = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  revisedAt: string
+  step_number: number
+  title: string
+  excerpt: string
+  eyecatch: {
+    url: string
+    height: 630
+    width: 1200
+  }
+  contents: string
+  permalink: string
+  category: {
+    id: string
+    createdAt: string
+    updatedAt: string
+    publishedAt: string
+    revisedAt: string
+    name: string
+  }
 }
 
 export type Params = {

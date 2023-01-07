@@ -4,6 +4,7 @@ import HomePage from '@/components/Pages/Home'
 
 export const getStaticProps = async () => {
   const data: Content = await client.get({ endpoint: 'blogs' })
+  console.log(data)
 
   return {
     props: {
