@@ -7,7 +7,7 @@ type NextImageProps = {
   spWidth?: number
   spHeight?: number
   spNone?: boolean
-  src: StaticImageData
+  src: string | StaticImageData
   alt: string
 }
 
