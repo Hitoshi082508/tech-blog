@@ -21,13 +21,19 @@ export const styles = makeStyles({
     ${sp} {
       flex-direction: column-reverse;
       width: 345px;
-      height: 427px;
+      height: 430px;
     }
   `,
   descriptionContainer: (theme) => css`
-    width: 90%;
+    width: 700px;
     margin-right: ${spacing * 5}px;
     background-color: ${theme.color.white};
+    ${sp} {
+      margin-right: 0;
+      width: 315px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   `,
   descriptionTitleContainer: (theme) => css`
     display: flex;

@@ -11,7 +11,6 @@ export const getStaticProps = async () => {
     endpoint: 'step',
     queries: { filters: `category[equals]${id}`, orders: 'step_number' },
   })
-  console.log(data.contents)
 
   return {
     props: {
