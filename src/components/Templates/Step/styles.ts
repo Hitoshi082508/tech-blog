@@ -34,6 +34,7 @@ export const styles = makeStyles({
     font-weight: ${theme.typography.weight.bold};
     color: ${theme.color.white};
     ${sp} {
+      width: 345px;
       font-size: ${theme.typography.heading.size.s};
     }
   `,
