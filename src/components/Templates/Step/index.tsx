@@ -1,7 +1,4 @@
-import NextImage from '@/components/Atoms/NextImage'
 import { styles } from './styles'
-import ArrowsImagePath from '../../../../assets/images/arrows.png'
-import { StaticImageData } from 'next/legacy/image'
 import StepCard from '@/components/Molecules/StepCard'
 
 type StepProps = {
@@ -12,7 +9,9 @@ const Step: React.FC<StepProps> = ({ title }) => {
   return (
     <div css={styles.base}>
       <div css={styles.container}>
-        <div css={styles.titleContainer}>{title}</div>
+        <div css={styles.titleContainer}>
+          <h2 css={styles.title}>{title}</h2>
+        </div>
         <StepCard />
         <StepCard />
         <StepCard />

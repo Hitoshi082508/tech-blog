@@ -1,5 +1,4 @@
 import JobDescription from '@/components/Templates/JobDescription'
-import { theme } from '@/styles/theme'
 import EngineerIconPath from '../../../assets/images/engineer-icon.png'
 import DescriptionImagePath from '../../../assets/images/description-image.png'
 import Step from '@/components/Templates/Step'
@@ -16,7 +15,7 @@ const DesignerPage: React.FC = () => {
         thumbnailPath={DescriptionImagePath}
         thumbnailAlt="デザイナーの説明画像"
       />
-      <Step title="タイトルだよ〜" />
+      <Step title="フロントエンジニアになるステップ" />
     </div>
   )
 }
