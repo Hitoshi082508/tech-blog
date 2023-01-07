@@ -60,9 +60,10 @@ export const styles = makeStyles({
     flex-wrap: wrap;
     justify-content: center;
     width: 1120px;
-    gap: ${spacing * 2}px;
+    gap: ${spacing * 5}px;
     ${sp} {
       width: 345px;
+      gap: ${spacing * 2}px;
     }
     ::after {
       content: '';
